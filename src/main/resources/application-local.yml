@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    # ===============================
+    # Local Database Configuration
+    # ===============================
+
+    # 로컬 개발 환경에서 사용하는 PostgreSQL DB 접속 정보
+    # DBeaver로 직접 연결해 확인하는 DB와 동일
+
+    # DB 접속 URL
+    # 형식: jdbc:postgresql://{host}:{port}/{database}
+    url: jdbc:postgresql://localhost:5432/library
+
+    # 로컬 PostgreSQL 계정 정보
+    username: postgres
+
+    # 로컬 개발 환경 DB 비밀번호
+    # (배포 환경에서는 환경변수 또는 별도 설정 파일로 관리 예정)
+    password: local1234

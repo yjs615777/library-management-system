@@ -1,0 +1,29 @@
+spring:
+  application:
+    # 애플리케이션 이름 (공통 설정)
+    # 모든 환경(local, prod)에서 동일하게 사용
+    name: library-management-system
+
+mybatis:
+  # ===============================
+  # MyBatis Common Configuration
+  # ===============================
+
+  # MyBatis XML Mapper 파일 위치
+  mapper-locations: classpath:/mapper/**/*.xml
+
+  # 도메인 패키지를 타입 별칭으로 등록
+  # XML Mapper에서 클래스명을 짧게 사용하기 위함
+  type-aliases-package: com.example.librarymanagementsystem.domain
+
+  configuration:
+    # DB 컬럼명(snake_case) → Java 필드명(camelCase) 자동 매핑
+    map-underscore-to-camel-case: true
+
+server:
+  # ===============================
+  # Server Configuration (Common)
+  # ===============================
+
+  # 내장 Tomcat 서버 포트
+  port: 8080
